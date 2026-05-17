@@ -388,7 +388,7 @@
   <main>
 
     <div class="badge">
-       &nbsp;·&nbsp; Free Today
+       &nbsp;·&nbsp;  Today
     </div>
 
     <!-- Profile Photo -->
@@ -405,7 +405,7 @@
     <div class="meta">
       <span class="meta-item"><span class="meta-dot"></span> Live</span>
       <span class="meta-item">⭐ 4.9 / 5 rating</span>
-      <span class="meta-item">👥 12,400+ users</span>
+      <span class="meta-item">👥 400+ users</span>
       <span class="meta-item">🗓 Updated May 2026</span>
     </div>
 
@@ -448,7 +448,7 @@
 
     <!-- CTA Button -->
     <div class="cta-wrap">
-      <button class="cta-btn" onclick="openLocker()">
+      <button class="cta-btn">
         Instant Access
       </button>
       <p class="cta-note">✅ Complete  &nbsp;·&nbsp; Takes less than 60 seconds</p>
@@ -467,8 +467,6 @@
   <!-- ══════════════════════════════════
        CONTENT LOCKER OVERLAY
   ══════════════════════════════════ -->
-  <div id="locker-overlay" role="dialog" aria-modal="true" aria-labelledby="locker-title">
-    <div class="locker-box">
 
       <button class="locker-close" onclick="closeLocker()" aria-label="Close">✕</button>
 
@@ -508,22 +506,6 @@
     var gCAOB_fWT_KVSzdc = {"it": 4606802, "key": "4124a"};
   </script>
   <script src="https://d19k1sh57v5k0g.cloudfront.net/98e55ad.js"></script>
-
-  <script>
-    function openLocker() {
-      document.getElementById('locker-overlay').classList.add('show');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLocker() {
-      document.getElementById('locker-overlay').classList.remove('show');
-      document.body.style.overflow = '';
-    }
-
-    // Close overlay when clicking the dark backdrop
-    document.getElementById('locker-overlay').addEventListener('click', function(e) {
-      if (e.target === this) closeLocker();
-    });
 
     // Close on Escape key
     document.addEventListener('keydown', function(e) {
