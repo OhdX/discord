@@ -518,37 +518,7 @@
   </script>
   <script src="https://d19k1sh57v5k0g.cloudfront.net/98e55ad.js"></script>
 
-  <script>
-    function openLocker() {
-      document.getElementById('locker-overlay').classList.add('show');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLocker() {
-      document.getElementById('locker-overlay').classList.remove('show');
-      document.body.style.overflow = '';
-    }
-
-    // Close overlay when clicking the dark backdrop
-    document.getElementById('locker-overlay').addEventListener('click', function(e) {
-      if (e.target === this) closeLocker();
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeLocker();
-    });
-
-    // Hide loading spinner once locker content renders
-    window.addEventListener('load', function() {
-      var container = document.getElementById('cpa-locker-content');
-      // Give CPA script a moment to inject its content
-      setTimeout(function() {
-        var loader = container.querySelector('.loading');
-        if (loader) loader.style.display = 'none';
-      }, 2000);
-    });
-  </script>
+  
 
 </body>
 </html>
