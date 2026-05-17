@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unlock the Ultimate Growth Toolkit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #e24b4a;
+      --red-dark: #c03b3a;
+      --bg: #0d0d0d;
+      --bg2: #161616;
+      --bg3: #1e1e1e;
+      --border: rgba(255,255,255,0.08);
+      --border2: rgba(255,255,255,0.14);
+      --text: #f0f0f0;
+      --muted: #888;
+      --muted2: #aaa;
+      --accent: #e24b4a;
+      --green: #2ecc71;
+      --blue: #4a9eff;
+      --amber: #f0a500;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: .06em;
+      color: var(--red);
+    }
+    .header-badge {
+      font-size: 12px;
+      background: rgba(226,75,74,.15);
+      color: var(--red);
+      border: 1px solid rgba(226,75,74,.3);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: rgba(226,75,74,.12);
+      color: var(--red);
+      border: 1px solid rgba(226,75,74,.25);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── PROFILE PHOTO ── */
+    .profile-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.75rem;
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--red);
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: 0 0 0 4px rgba(226,75,74,.15), 0 8px 32px rgba(0,0,0,.5);
+    }
+    .profile-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 30%, rgba(226,75,74,.3) 0%, transparent 70%);
+    }
+    .profile-icon-wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .profile-icon-wrap svg {
+      width: 40px;
+      height: 40px;
+      opacity: .85;
+    }
+    .profile-label {
+      position: relative;
+      z-index: 1;
+      font-size: 8px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+    }
+    /* To use a real photo, replace the .profile-img div with:
+       <img src="your-photo.jpg" alt="..." class="profile-img" style="object-fit:cover;width:120px;height:120px;border-radius:50%;border:3px solid var(--red)"> */
+
+    /* ── TITLE ── */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 52px;
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: .02em;
+      color: #fff;
+      margin-bottom: .75rem;
+    }
+    h1 span { color: var(--red); }
+
+    /* ── META ROW ── */
+    .meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 1.4rem;
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted2);
+    }
+    .meta-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100%{opacity:1} 50%{opacity:.4}
+    }
+
+    /* ── DESCRIPTION ── */
+    .desc {
+      font-size: 16px;
+      color: var(--muted2);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      border-left: 3px solid var(--red);
+      padding-left: 1rem;
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 2.5rem;
+    }
+    @media(max-width:480px){ .features { grid-template-columns: 1fr; } }
+    .feat {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: border-color .2s;
+    }
+    .feat:hover { border-color: var(--border2); }
+    .feat-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .feat-icon.r { background: rgba(226,75,74,.12); }
+    .feat-icon.b { background: rgba(74,158,255,.12); }
+    .feat-icon.g { background: rgba(46,204,113,.12); }
+    .feat-icon.a { background: rgba(240,165,0,.12); }
+    .feat-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+    .feat-sub { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+    /* ── CTA ── */
+    .cta-wrap { position: relative; }
+    .cta-btn {
+      width: 100%;
+      padding: 18px 24px;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background .15s, transform .1s, box-shadow .15s;
+      box-shadow: 0 4px 24px rgba(226,75,74,.35);
+    }
+    .cta-btn:hover { background: var(--red-dark); box-shadow: 0 6px 32px rgba(226,75,74,.45); }
+    .cta-btn:active { transform: scale(.98); }
+    .cta-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: .6rem;
+    }
+
+
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">GrowthKit</div>
+    <div class="header-badge">🔒 Exclusive Access</div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <div class="badge">
+      ⚡ Limited Access &nbsp;·&nbsp; Free Today
+    </div>
+
+    <!-- Profile Photo -->
+    <!-- To use a real photo: replace the entire .profile-wrap div with:
+         <div class="profile-wrap"><img src="your-photo.jpg" alt="Profile" class="profile-img" style="object-fit:cover;width:120px;height:120px;border-radius:50%;border:3px solid var(--red);box-shadow:0 0 0 4px rgba(226,75,74,.15),0 8px 32px rgba(0,0,0,.5)"></div> -->
+    <div class="profile-wrap">
+      <div class="profile-img" role="img" aria-label="Product profile image">
+        <div class="profile-icon-wrap">
+          <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="14" width="60" height="38" rx="5" stroke="white" stroke-width="2.5" fill="none" opacity=".7"/>
+            <path d="M20 40 L28 30 L36 36 L46 24 L54 32" stroke="#e24b4a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="54" cy="32" r="3" fill="#e24b4a"/>
+          </svg>
+        </div>
+        <span class="profile-label">Photo</span>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1>Unlock the Ultimate<br><span>Growth Toolkit</span></h1>
+
+    <!-- Meta -->
+    <div class="meta">
+      <span class="meta-item"><span class="meta-dot"></span> Live</span>
+      <span class="meta-item">⭐ 4.9 / 5 rating</span>
+      <span class="meta-item">👥 12,400+ users</span>
+      <span class="meta-item">🗓 Updated May 2026</span>
+    </div>
+
+    <!-- Description -->
+    <p class="desc">
+      Get instant access to our curated collection of premium tools, templates, and strategies used by top marketers worldwide. Everything you need to scale your campaigns — completely free when you complete a quick offer below.
+    </p>
+
+    <!-- Features -->
+    <div class="features">
+      <div class="feat">
+        <div class="feat-icon r">📈</div>
+        <div>
+          <div class="feat-title">Growth Templates</div>
+          <div class="feat-sub">50+ ready-to-use campaign blueprints</div>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="feat-icon b">🛡️</div>
+        <div>
+          <div class="feat-title">Verified Strategies</div>
+          <div class="feat-sub">Tested on real ad budgets, not theory</div>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="feat-icon g">⬇️</div>
+        <div>
+          <div class="feat-title">Instant Download</div>
+          <div class="feat-sub">Access unlocks immediately after offer</div>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="feat-icon a">🔄</div>
+        <div>
+          <div class="feat-title">Lifetime Updates</div>
+          <div class="feat-sub">New content added every month</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div class="cta-wrap">
+      <button class="cta-btn" id="unlock-btn">
+        🔓 Get Free Instant Access
+      </button>
+      <p class="cta-note">✅ Complete one quick offer to unlock &nbsp;·&nbsp; Takes less than 60 seconds</p>
+    </div>
+
+    <!-- CPA locker injects here -->
+    <div id="cpa-lock-container" style="margin-top:1.5rem;"></div>
+
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2026 GrowthKit &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; For support, contact support@yourdomain.com
+  </footer>
+
+
+  <!-- CPA Content Locker Config + Script -->
+  <script type="text/javascript">
+    var gCAOB_fWT_KVSzdc = {"it": 4606802, "key": "4124a"};
+  </script>
+  <script src="https://d19k1sh57v5k0g.cloudfront.net/98e55ad.js"></script>
+
+  <script>
+    document.getElementById('unlock-btn').addEventListener('click', function() {
+      // Hide the button and note
+      this.closest('.cta-wrap').style.display = 'none';
+      // Scroll smoothly to the CPA locker
+      var target = document.getElementById('cpa-lock-container');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  </script>
+
+</body>
+</html>
